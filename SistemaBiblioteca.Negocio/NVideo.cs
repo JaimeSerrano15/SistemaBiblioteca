@@ -54,7 +54,7 @@ namespace SistemaBiblioteca.Negocio
             }
         }
 
-        public static string Actualizar(string titulo, string director, string productora,
+        public static string Actualizar(int codigo,string titulo, string director, string productora,
            int id_tipo, int anio, int duracion, string pais, string idioma, string subtitulo,
            string clasificacion, string genero, string sinopsis, string ubicacion)
         {
@@ -63,6 +63,7 @@ namespace SistemaBiblioteca.Negocio
             if (Exists.Equals("1"))
             {
                 Video Obj = new Video();
+                Obj.Codigo_video = codigo;
                 Obj.Titulo = titulo;
                 Obj.Director = director;
                 Obj.Productora = productora;

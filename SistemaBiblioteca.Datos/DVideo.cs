@@ -79,6 +79,7 @@ namespace SistemaBiblioteca.Datos
                 Exists.Direction = ParameterDirection.Output;
                 Command.Parameters.Add(Exists);
                 SqlCon.Open();
+                Command.ExecuteNonQuery();
                 Res = Convert.ToString(Exists.Value);
             }
             catch (Exception ex)
@@ -137,6 +138,7 @@ namespace SistemaBiblioteca.Datos
                 SqlCon = Conexion.getInstance().createConnection();
                 SqlCommand Command = new SqlCommand("video_actualizar", SqlCon);
                 Command.CommandType = CommandType.StoredProcedure;
+                Command.Parameters.Add("@codigo_video", SqlDbType.Int).Value = Obj.Titulo;
                 Command.Parameters.Add("@titulo", SqlDbType.Int).Value = Obj.Titulo;
                 Command.Parameters.Add("@director", SqlDbType.VarChar).Value = Obj.Director;
                 Command.Parameters.Add("@productora", SqlDbType.VarChar).Value = Obj.Productora;

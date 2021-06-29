@@ -67,7 +67,7 @@ namespace SistemaBiblioteca.Presentacion
             DgvListadoLibro.Columns[11].Width = 100;
             DgvListadoLibro.Columns[12].Width = 50;
             DgvListadoLibro.Columns[13].Width = 50;
-            DgvListadoLibro.Columns[14].Width = 400;
+            DgvListadoLibro.Columns[14].Width = 400;    
         }
 
         private void Limpiar()
@@ -114,11 +114,6 @@ namespace SistemaBiblioteca.Presentacion
             this.Buscar();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnInsertarLibro_Click(object sender, EventArgs e)
         {
             try
@@ -136,9 +131,8 @@ namespace SistemaBiblioteca.Presentacion
                     EpLibro.SetError(TxtEdicion, "Ingrese el número de edición");
                     EpLibro.SetError(TxtIdioma, "Ingrese el idioma");
                     EpLibro.SetError(TxtMateriaa, "Ingrese la materia");
-                    EpLibro.SetError(TxtTitulo, "Ingrese un título");
-                    EpLibro.SetError(TxtTitulo, "Ingrese un título");
-                    EpLibro.SetError(TxtTitulo, "Ingrese un título");
+                    EpLibro.SetError(TxtPaginas, "Ingrese el número de páginas");
+                    EpLibro.SetError(TxtUbicacion, "Ingrese la ubicación");
                 }
                 else
                 {
@@ -225,7 +219,7 @@ namespace SistemaBiblioteca.Presentacion
                     ans = NLibro.Actualizar(Convert.ToInt32(txtCodigoLibro.Text),Convert.ToInt32(TxtEjemplares.Text), TxtIsbn.Text.Trim(), TxtTitulo.Text, TxtAutor.Text.Trim(), TxtEditorial.Text.Trim(), Convert.ToInt32(TxtAEdicion.Text), Convert.ToInt32(TxtEdicion.Text), TxtPais.Text.Trim(), TxtIdioma.Text.Trim(), TxtMateriaa.Text.Trim(), Convert.ToInt32(TxtPaginas.Text), TxtUbicacion.Text.Trim(), TxtDescripcion.Text.Trim());
                     if(ans.Equals("Ok"))
                     {
-                        this.MensajeOk("Se actualizó de forma correcto la información del libro");
+                        this.MensajeOk("Se actualizó de forma correcta la información del libro");
                         this.Listar();
                         tabGeneralLibro.SelectedIndex = 0;
                     }

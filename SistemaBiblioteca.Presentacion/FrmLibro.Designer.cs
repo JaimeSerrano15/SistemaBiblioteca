@@ -32,6 +32,8 @@ namespace SistemaBiblioteca.Presentacion
             this.components = new System.ComponentModel.Container();
             this.tabGeneralLibro = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.BtnEliminarLibro = new System.Windows.Forms.Button();
+            this.ChkSeleccionarLibro = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnBuscarLibro = new System.Windows.Forms.Button();
             this.txtBuscarLibro = new System.Windows.Forms.TextBox();
@@ -39,6 +41,8 @@ namespace SistemaBiblioteca.Presentacion
             this.DgvListadoLibro = new System.Windows.Forms.DataGridView();
             this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtCodigoLibro = new System.Windows.Forms.TextBox();
+            this.BtnActualizar = new System.Windows.Forms.Button();
             this.TxtEjemplares = new System.Windows.Forms.TextBox();
             this.BtnLibroCancelar = new System.Windows.Forms.Button();
             this.BtnInsertarLibro = new System.Windows.Forms.Button();
@@ -69,10 +73,6 @@ namespace SistemaBiblioteca.Presentacion
             this.LblIsbn = new System.Windows.Forms.Label();
             this.LblEjemplares = new System.Windows.Forms.Label();
             this.EpLibro = new System.Windows.Forms.ErrorProvider(this.components);
-            this.BtnActualizar = new System.Windows.Forms.Button();
-            this.txtCodigoLibro = new System.Windows.Forms.TextBox();
-            this.ChkSeleccionarLibro = new System.Windows.Forms.CheckBox();
-            this.BtnEliminarLibro = new System.Windows.Forms.Button();
             this.tabGeneralLibro.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListadoLibro)).BeginInit();
@@ -108,6 +108,29 @@ namespace SistemaBiblioteca.Presentacion
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consulta";
             // 
+            // BtnEliminarLibro
+            // 
+            this.BtnEliminarLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminarLibro.Location = new System.Drawing.Point(230, 517);
+            this.BtnEliminarLibro.Name = "BtnEliminarLibro";
+            this.BtnEliminarLibro.Size = new System.Drawing.Size(105, 27);
+            this.BtnEliminarLibro.TabIndex = 6;
+            this.BtnEliminarLibro.Text = "Eliminar";
+            this.BtnEliminarLibro.UseVisualStyleBackColor = true;
+            this.BtnEliminarLibro.Click += new System.EventHandler(this.BtnEliminarLibro_Click);
+            // 
+            // ChkSeleccionarLibro
+            // 
+            this.ChkSeleccionarLibro.AutoSize = true;
+            this.ChkSeleccionarLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkSeleccionarLibro.Location = new System.Drawing.Point(30, 517);
+            this.ChkSeleccionarLibro.Name = "ChkSeleccionarLibro";
+            this.ChkSeleccionarLibro.Size = new System.Drawing.Size(148, 27);
+            this.ChkSeleccionarLibro.TabIndex = 5;
+            this.ChkSeleccionarLibro.Text = "Seleccionar";
+            this.ChkSeleccionarLibro.UseVisualStyleBackColor = true;
+            this.ChkSeleccionarLibro.CheckedChanged += new System.EventHandler(this.ChkSeleccionarLibro_CheckedChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -120,9 +143,10 @@ namespace SistemaBiblioteca.Presentacion
             // 
             // BtnBuscarLibro
             // 
+            this.BtnBuscarLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBuscarLibro.Location = new System.Drawing.Point(645, 48);
             this.BtnBuscarLibro.Name = "BtnBuscarLibro";
-            this.BtnBuscarLibro.Size = new System.Drawing.Size(78, 30);
+            this.BtnBuscarLibro.Size = new System.Drawing.Size(99, 32);
             this.BtnBuscarLibro.TabIndex = 3;
             this.BtnBuscarLibro.Text = "Buscar";
             this.BtnBuscarLibro.UseVisualStyleBackColor = true;
@@ -214,6 +238,27 @@ namespace SistemaBiblioteca.Presentacion
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             // 
+            // txtCodigoLibro
+            // 
+            this.txtCodigoLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoLibro.Location = new System.Drawing.Point(29, 47);
+            this.txtCodigoLibro.Name = "txtCodigoLibro";
+            this.txtCodigoLibro.Size = new System.Drawing.Size(134, 27);
+            this.txtCodigoLibro.TabIndex = 31;
+            this.txtCodigoLibro.Visible = false;
+            this.txtCodigoLibro.WordWrap = false;
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnActualizar.Location = new System.Drawing.Point(734, 478);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(137, 38);
+            this.BtnActualizar.TabIndex = 30;
+            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
             // TxtEjemplares
             // 
             this.TxtEjemplares.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,7 +272,7 @@ namespace SistemaBiblioteca.Presentacion
             this.BtnLibroCancelar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLibroCancelar.Location = new System.Drawing.Point(936, 478);
             this.BtnLibroCancelar.Name = "BtnLibroCancelar";
-            this.BtnLibroCancelar.Size = new System.Drawing.Size(122, 38);
+            this.BtnLibroCancelar.Size = new System.Drawing.Size(130, 38);
             this.BtnLibroCancelar.TabIndex = 28;
             this.BtnLibroCancelar.Text = "Cancelar";
             this.BtnLibroCancelar.UseVisualStyleBackColor = true;
@@ -266,7 +311,7 @@ namespace SistemaBiblioteca.Presentacion
             // TxtUbicacion
             // 
             this.TxtUbicacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUbicacion.Location = new System.Drawing.Point(734, 227);
+            this.TxtUbicacion.Location = new System.Drawing.Point(822, 225);
             this.TxtUbicacion.Name = "TxtUbicacion";
             this.TxtUbicacion.Size = new System.Drawing.Size(280, 27);
             this.TxtUbicacion.TabIndex = 24;
@@ -274,7 +319,7 @@ namespace SistemaBiblioteca.Presentacion
             // TxtPaginas
             // 
             this.TxtPaginas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPaginas.Location = new System.Drawing.Point(810, 181);
+            this.TxtPaginas.Location = new System.Drawing.Point(898, 183);
             this.TxtPaginas.Name = "TxtPaginas";
             this.TxtPaginas.Size = new System.Drawing.Size(204, 27);
             this.TxtPaginas.TabIndex = 23;
@@ -282,7 +327,7 @@ namespace SistemaBiblioteca.Presentacion
             // TxtMateriaa
             // 
             this.TxtMateriaa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMateriaa.Location = new System.Drawing.Point(710, 137);
+            this.TxtMateriaa.Location = new System.Drawing.Point(798, 137);
             this.TxtMateriaa.Name = "TxtMateriaa";
             this.TxtMateriaa.Size = new System.Drawing.Size(304, 27);
             this.TxtMateriaa.TabIndex = 22;
@@ -369,7 +414,7 @@ namespace SistemaBiblioteca.Presentacion
             this.LblUbicacion.BackColor = System.Drawing.Color.SandyBrown;
             this.LblUbicacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblUbicacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUbicacion.Location = new System.Drawing.Point(627, 230);
+            this.LblUbicacion.Location = new System.Drawing.Point(700, 228);
             this.LblUbicacion.Name = "LblUbicacion";
             this.LblUbicacion.Size = new System.Drawing.Size(95, 22);
             this.LblUbicacion.TabIndex = 11;
@@ -381,7 +426,7 @@ namespace SistemaBiblioteca.Presentacion
             this.LblPaginas.BackColor = System.Drawing.Color.SandyBrown;
             this.LblPaginas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblPaginas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPaginas.Location = new System.Drawing.Point(627, 184);
+            this.LblPaginas.Location = new System.Drawing.Point(700, 186);
             this.LblPaginas.Name = "LblPaginas";
             this.LblPaginas.Size = new System.Drawing.Size(171, 22);
             this.LblPaginas.TabIndex = 10;
@@ -393,7 +438,7 @@ namespace SistemaBiblioteca.Presentacion
             this.LblMateria.BackColor = System.Drawing.Color.SandyBrown;
             this.LblMateria.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblMateria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMateria.Location = new System.Drawing.Point(627, 140);
+            this.LblMateria.Location = new System.Drawing.Point(700, 140);
             this.LblMateria.Name = "LblMateria";
             this.LblMateria.Size = new System.Drawing.Size(73, 22);
             this.LblMateria.TabIndex = 9;
@@ -510,50 +555,6 @@ namespace SistemaBiblioteca.Presentacion
             // EpLibro
             // 
             this.EpLibro.ContainerControl = this;
-            // 
-            // BtnActualizar
-            // 
-            this.BtnActualizar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnActualizar.Location = new System.Drawing.Point(734, 478);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(122, 38);
-            this.BtnActualizar.TabIndex = 30;
-            this.BtnActualizar.Text = "Actualizar";
-            this.BtnActualizar.UseVisualStyleBackColor = true;
-            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
-            // 
-            // txtCodigoLibro
-            // 
-            this.txtCodigoLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoLibro.Location = new System.Drawing.Point(29, 47);
-            this.txtCodigoLibro.Name = "txtCodigoLibro";
-            this.txtCodigoLibro.Size = new System.Drawing.Size(134, 27);
-            this.txtCodigoLibro.TabIndex = 31;
-            this.txtCodigoLibro.Visible = false;
-            this.txtCodigoLibro.WordWrap = false;
-            // 
-            // ChkSeleccionarLibro
-            // 
-            this.ChkSeleccionarLibro.AutoSize = true;
-            this.ChkSeleccionarLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChkSeleccionarLibro.Location = new System.Drawing.Point(30, 517);
-            this.ChkSeleccionarLibro.Name = "ChkSeleccionarLibro";
-            this.ChkSeleccionarLibro.Size = new System.Drawing.Size(148, 27);
-            this.ChkSeleccionarLibro.TabIndex = 5;
-            this.ChkSeleccionarLibro.Text = "Seleccionar";
-            this.ChkSeleccionarLibro.UseVisualStyleBackColor = true;
-            this.ChkSeleccionarLibro.CheckedChanged += new System.EventHandler(this.ChkSeleccionarLibro_CheckedChanged);
-            // 
-            // BtnEliminarLibro
-            // 
-            this.BtnEliminarLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminarLibro.Location = new System.Drawing.Point(230, 517);
-            this.BtnEliminarLibro.Name = "BtnEliminarLibro";
-            this.BtnEliminarLibro.Size = new System.Drawing.Size(105, 27);
-            this.BtnEliminarLibro.TabIndex = 6;
-            this.BtnEliminarLibro.Text = "Eliminar";
-            this.BtnEliminarLibro.UseVisualStyleBackColor = true;
-            this.BtnEliminarLibro.Click += new System.EventHandler(this.BtnEliminarLibro_Click);
             // 
             // FrmLibro
             // 

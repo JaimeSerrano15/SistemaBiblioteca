@@ -115,5 +115,17 @@ namespace SistemaBiblioteca.Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void videosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVideo frm = new FrmVideo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
