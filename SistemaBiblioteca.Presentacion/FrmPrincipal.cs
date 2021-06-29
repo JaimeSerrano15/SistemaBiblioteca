@@ -13,6 +13,11 @@ namespace SistemaBiblioteca.Presentacion
     public partial class FrmPrincipal : Form
     {
         private int childFormNumber = 0;
+        public int idUser;
+        public int idRol;
+        public string name;
+        public string rol;
+        public bool estado;
 
         public FrmPrincipal()
         {
@@ -118,7 +123,8 @@ namespace SistemaBiblioteca.Presentacion
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            StBarraInferior.Text = "Sistema de Mantenimiento de Biblioteca, Usuario: " + this.name;
+            MessageBox.Show("Bienvenido: " + this.name, "Sistema de Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void videosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,6 +132,11 @@ namespace SistemaBiblioteca.Presentacion
             FrmVideo frm = new FrmVideo();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

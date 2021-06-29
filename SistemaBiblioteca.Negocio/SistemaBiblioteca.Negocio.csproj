@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NLibro.cs" />
+    <Compile Include="NUsuario.cs" />
     <Compile Include="NVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

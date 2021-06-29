@@ -54,7 +54,7 @@ namespace SistemaBiblioteca.Presentacion
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StBarraInferior = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -97,7 +97,7 @@ namespace SistemaBiblioteca.Presentacion
             // videosToolStripMenuItem
             // 
             this.videosToolStripMenuItem.Name = "videosToolStripMenuItem";
-            this.videosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.videosToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.videosToolStripMenuItem.Text = "&Videos";
             this.videosToolStripMenuItem.Click += new System.EventHandler(this.videosToolStripMenuItem_Click);
             // 
@@ -248,7 +248,7 @@ namespace SistemaBiblioteca.Presentacion
             // 
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.StBarraInferior});
             this.statusStrip.Location = new System.Drawing.Point(0, 532);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
@@ -256,11 +256,11 @@ namespace SistemaBiblioteca.Presentacion
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
-            // toolStripStatusLabel
+            // StBarraInferior
             // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(279, 20);
-            this.toolStripStatusLabel.Text = "Sistema de Mantenimiento de Biblioteca";
+            this.StBarraInferior.Name = "StBarraInferior";
+            this.StBarraInferior.Size = new System.Drawing.Size(279, 20);
+            this.StBarraInferior.Text = "Sistema de Mantenimiento de Biblioteca";
             // 
             // FrmPrincipal
             // 
@@ -276,6 +276,7 @@ namespace SistemaBiblioteca.Presentacion
             this.Name = "FrmPrincipal";
             this.Text = "Sistema de Biblioteca";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -292,7 +293,7 @@ namespace SistemaBiblioteca.Presentacion
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel StBarraInferior;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMenu;
