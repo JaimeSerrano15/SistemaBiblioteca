@@ -32,7 +32,7 @@ namespace SistemaBiblioteca.Datos
             }
         }
 
-        public DataTable Buscar(String Valor)
+        public DataTable Buscar(String valor)
         {
             SqlDataReader Result;
             DataTable Table = new DataTable();
@@ -42,7 +42,7 @@ namespace SistemaBiblioteca.Datos
                 SqlCon = Conexion.getInstance().createConnection();
                 SqlCommand Command = new SqlCommand("libro_buscar", SqlCon);
                 Command.CommandType = CommandType.StoredProcedure;
-                Command.Parameters.Add("@valor", SqlDbType.VarChar).Value = Valor;
+                Command.Parameters.Add("@valor", SqlDbType.VarChar).Value = valor;
                 SqlCon.Open();
                 Result = Command.ExecuteReader();
                 Table.Load(Result);
@@ -73,6 +73,7 @@ namespace SistemaBiblioteca.Datos
                 Exists.Direction = ParameterDirection.Output;
                 Command.Parameters.Add(Exists);
                 SqlCon.Open();
+                Command.ExecuteNonQuery();
                 Res = Convert.ToString(Exists.Value);
             } catch(Exception ex)
             {
@@ -129,6 +130,7 @@ namespace SistemaBiblioteca.Datos
                 SqlCon = Conexion.getInstance().createConnection();
                 SqlCommand Command = new SqlCommand("libro_actualizar", SqlCon);
                 Command.CommandType = CommandType.StoredProcedure;
+                Command.Parameters.Add("@codigolibro", SqlDbType.VarChar).Value = Obj.Codigo_libro;
                 Command.Parameters.Add("@ejemplares", SqlDbType.Int).Value = Obj.No_ejemplares;
                 Command.Parameters.Add("@isbn", SqlDbType.VarChar).Value = Obj.Isbn;
                 Command.Parameters.Add("@titulo", SqlDbType.VarChar).Value = Obj.Titulo;

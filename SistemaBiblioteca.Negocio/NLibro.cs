@@ -17,10 +17,10 @@ namespace SistemaBiblioteca.Negocio
             return Data.Listar();
         }
 
-        public static DataTable Buscar(string Valor)
+        public static DataTable Buscar(string valor)
         {
             DLibro Data = new DLibro();
-            return Data.Buscar(Valor);
+            return Data.Buscar(valor);
         }
 
         public static string Insertar(int no_ejemplares, string isbn, string titulo, 
@@ -55,7 +55,7 @@ namespace SistemaBiblioteca.Negocio
             }
         }
 
-        public static string Actualizar(int no_ejemplares, string isbn, string titulo,
+        public static string Actualizar(int codigo_libro,int no_ejemplares, string isbn, string titulo,
            string autor, string editorial, int a_edicion, int no_edicion, string pais,
            string idioma, string materia, int no_paginas, string ubicacion, string descripcion)
         {
@@ -64,6 +64,7 @@ namespace SistemaBiblioteca.Negocio
             if (Exists.Equals("1"))
             {
                 Libro Obj = new Libro();
+                Obj.Codigo_libro = codigo_libro;
                 Obj.No_ejemplares = no_ejemplares;
                 Obj.No_edicion = no_edicion;
                 Obj.Isbn = isbn;
@@ -83,7 +84,7 @@ namespace SistemaBiblioteca.Negocio
             }
             else
             {
-                return "el libro no existe";
+                return "El libro no existe";
             }
         }
 
