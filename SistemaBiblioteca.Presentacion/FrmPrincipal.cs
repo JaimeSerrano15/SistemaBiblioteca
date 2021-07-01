@@ -138,5 +138,12 @@ namespace SistemaBiblioteca.Presentacion
         {
             Application.Exit();
         }
+
+        private void libroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmPrestamoLibro frm = new FrmPrestamoLibro();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace SistemaBiblioteca.Datos
         private Conexion()
         {
             this.bd = "dbBiblioteca";
-            this.server = "LAPTOP-P3PHODQ5";
+            this.server = "ALEJANDROSERVER";
             this.user = "sa";
             this.pass = "jaiserpnc";
             this.security = true;
