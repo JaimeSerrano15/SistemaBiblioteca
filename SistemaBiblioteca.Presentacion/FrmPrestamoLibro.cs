@@ -61,10 +61,6 @@ namespace SistemaBiblioteca.Presentacion
                 }
             }
 
-            MessageBox.Show("id profesor" + profesor + " codigo del libro" +
-                codigo_libro + " fecha de devolucion " + fecha_devolucion +
-                " fecha de prestamo " + fecha_prestamo);
-
             NPrestamo_libro.Insertar_Prestamo(profesor, codigo_libro,
             fecha_prestamo, fecha_devolucion);
             Prestamos.DataSource = NPrestamo_libro.Listar_Prestamos(profesor_name);

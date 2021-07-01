@@ -11,7 +11,7 @@ namespace SistemaBiblioteca.Entidades
         public int Id_prestamo_video { get; set; }
         public int Id_usuario { get; set; }
         public int Codigo_video { get; set; }
-        public string Fecha_prestamo { get; set; }
-        public string Fecha_devolucion { get; set; }
+        public DateTime Fecha_prestamo { get; set; }
+        public DateTime Fecha_devolucion { get; set; }
     }
 }

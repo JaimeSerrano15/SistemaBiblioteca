@@ -145,5 +145,12 @@ namespace SistemaBiblioteca.Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void videoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPrestamoVideo frm = new FrmPrestamoVideo();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

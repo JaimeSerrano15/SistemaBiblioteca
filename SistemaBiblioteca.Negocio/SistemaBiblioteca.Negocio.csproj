@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="NLibro.cs" />
     <Compile Include="NPrestamo_libro.cs" />
+    <Compile Include="NPrestamo_video.cs" />
     <Compile Include="NUsuario.cs" />
     <Compile Include="NVideo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

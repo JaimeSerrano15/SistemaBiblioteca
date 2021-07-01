@@ -47,18 +47,18 @@ namespace SistemaBiblioteca.Presentacion
             this.arrangeIconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.préstamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.libroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.videoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.StBarraInferior = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.préstamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.libroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.videoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -94,14 +94,14 @@ namespace SistemaBiblioteca.Presentacion
             // libroToolStripMenuItem
             // 
             this.libroToolStripMenuItem.Name = "libroToolStripMenuItem";
-            this.libroToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.libroToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.libroToolStripMenuItem.Text = "&Libros";
             this.libroToolStripMenuItem.Click += new System.EventHandler(this.libroToolStripMenuItem_Click);
             // 
             // videosToolStripMenuItem
             // 
             this.videosToolStripMenuItem.Name = "videosToolStripMenuItem";
-            this.videosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.videosToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.videosToolStripMenuItem.Text = "&Videos";
             this.videosToolStripMenuItem.Click += new System.EventHandler(this.videosToolStripMenuItem_Click);
             // 
@@ -206,22 +206,6 @@ namespace SistemaBiblioteca.Presentacion
             this.contentsToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.contentsToolStripMenuItem.Text = "&Contents";
             // 
-            // indexToolStripMenuItem
-            // 
-            this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
-            this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
-            this.indexToolStripMenuItem.Text = "&Index";
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
-            this.searchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
-            this.searchToolStripMenuItem.Text = "&Search";
-            // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
@@ -238,6 +222,29 @@ namespace SistemaBiblioteca.Presentacion
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // préstamosToolStripMenuItem
+            // 
+            this.préstamosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.libroToolStripMenuItem1,
+            this.videoToolStripMenuItem});
+            this.préstamosToolStripMenuItem.Name = "préstamosToolStripMenuItem";
+            this.préstamosToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.préstamosToolStripMenuItem.Text = "Préstamos";
+            // 
+            // libroToolStripMenuItem1
+            // 
+            this.libroToolStripMenuItem1.Name = "libroToolStripMenuItem1";
+            this.libroToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.libroToolStripMenuItem1.Text = "Libro";
+            this.libroToolStripMenuItem1.Click += new System.EventHandler(this.libroToolStripMenuItem1_Click);
+            // 
+            // videoToolStripMenuItem
+            // 
+            this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
+            this.videoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.videoToolStripMenuItem.Text = "Video";
+            this.videoToolStripMenuItem.Click += new System.EventHandler(this.videoToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
@@ -266,27 +273,21 @@ namespace SistemaBiblioteca.Presentacion
             this.StBarraInferior.Size = new System.Drawing.Size(279, 20);
             this.StBarraInferior.Text = "Sistema de Mantenimiento de Biblioteca";
             // 
-            // préstamosToolStripMenuItem
+            // indexToolStripMenuItem
             // 
-            this.préstamosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.libroToolStripMenuItem1,
-            this.videoToolStripMenuItem});
-            this.préstamosToolStripMenuItem.Name = "préstamosToolStripMenuItem";
-            this.préstamosToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
-            this.préstamosToolStripMenuItem.Text = "Préstamos";
+            this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
+            this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
+            this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.indexToolStripMenuItem.Text = "&Index";
             // 
-            // libroToolStripMenuItem1
+            // searchToolStripMenuItem
             // 
-            this.libroToolStripMenuItem1.Name = "libroToolStripMenuItem1";
-            this.libroToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.libroToolStripMenuItem1.Text = "Libro";
-            this.libroToolStripMenuItem1.Click += new System.EventHandler(this.libroToolStripMenuItem1_Click);
-            // 
-            // videoToolStripMenuItem
-            // 
-            this.videoToolStripMenuItem.Name = "videoToolStripMenuItem";
-            this.videoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.videoToolStripMenuItem.Text = "Video";
+            this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
+            this.searchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.searchToolStripMenuItem.Text = "&Search";
             // 
             // FrmPrincipal
             // 

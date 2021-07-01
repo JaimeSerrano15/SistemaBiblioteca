@@ -64,6 +64,12 @@
     <Compile Include="FrmPrestamoLibro.Designer.cs">
       <DependentUpon>FrmPrestamoLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPrestamoVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrestamoVideo.Designer.cs">
+      <DependentUpon>FrmPrestamoVideo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrestamoLibro.resx">
       <DependentUpon>FrmPrestamoLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrestamoVideo.resx">
+      <DependentUpon>FrmPrestamoVideo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
