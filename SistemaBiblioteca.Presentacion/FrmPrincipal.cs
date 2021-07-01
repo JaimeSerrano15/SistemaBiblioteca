@@ -152,5 +152,23 @@ namespace SistemaBiblioteca.Presentacion
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void librosRegistradosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes.FrmListarLibros reporteLibros = new Reportes.FrmListarLibros();
+            reporteLibros.ShowDialog();
+        }
+
+        private void prestamosActivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes.FrmPrestamosActivos prestamosActivos = new Reportes.FrmPrestamosActivos();
+            prestamosActivos.ShowDialog();
+        }
+
+        private void videosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Reportes.FrmVideos videos = new Reportes.FrmVideos();
+            videos.ShowDialog();
+        }
     }
 }
